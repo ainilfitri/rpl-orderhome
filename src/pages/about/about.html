@@ -1,0 +1,116 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Stok
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <ion-item>
+      <ion-thumbnail item-left>
+        <img src="assets/gambar/galon.png">
+      </ion-thumbnail>
+        <ion-label>Galon Aqua</ion-label>    
+          <h2 item-right padding-left>{{jumlahgalonaqua}}</h2>
+    </ion-item>
+  </ion-list>
+  <ion-grid>
+            <ion-row justify-content-end>
+              <ion-col col-3>
+                <ion-grid>
+                  <ion-row>
+                    <ion-col>
+                      <ion-icon name="remove-circle" (click)="kuranggalon()"></ion-icon>
+                      <ion-icon name="add-circle" (click)="tambahgalon()"></ion-icon>
+                    </ion-col>
+                  </ion-row>
+                </ion-grid>
+              </ion-col>
+            </ion-row>
+  </ion-grid>
+  
+  <ion-list>
+    <ion-item>
+      <ion-thumbnail item-left>
+        <img src="assets/gambar/galon.png">
+      </ion-thumbnail>
+        <ion-label>Galon Prima</ion-label>    
+          <h2 item-right padding-left>{{jumlahgalonprima}}</h2>
+    </ion-item>
+  </ion-list>
+  <ion-grid>
+            <ion-row justify-content-end>
+              <ion-col col-3>
+                <ion-grid>
+                  <ion-row>
+                    <ion-col>
+                      <ion-icon name="remove-circle" (click)="kuranggalonprima()"></ion-icon>
+                      <ion-icon name="add-circle" (click)="tambahgalonprima()"></ion-icon>
+                    </ion-col>
+                  </ion-row>
+                </ion-grid>
+              </ion-col>
+            </ion-row>
+  </ion-grid>
+  
+  <ion-list>
+    <ion-item>
+      <ion-thumbnail item-left>
+        <img src="assets/gambar/gas3kg.jpg">
+      </ion-thumbnail>
+        <ion-label>Gas 3Kg</ion-label>    
+          <h2 item-right padding-left>{{jumlahgas3}}</h2>
+    </ion-item>
+  </ion-list>
+    <ion-grid>
+      <ion-row justify-content-end>
+        <ion-col col-3>
+          <ion-grid>
+            <ion-row>
+             <ion-col>
+               <ion-icon name="remove-circle" (click)="kuranggas3()"></ion-icon>
+               <ion-icon name="add-circle" (click)="tambahgas3()"></ion-icon>
+             </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+
+  <ion-list>
+    <ion-item>
+      <ion-thumbnail item-left>
+        <img src="assets/gambar/12kg.png">
+      </ion-thumbnail>
+        <ion-label>Gas 12Kg</ion-label>    
+          <h2 item-right padding-left>{{jumlahgas1}}</h2>
+    </ion-item>
+  </ion-list>
+    <ion-grid>
+      <ion-row justify-content-end>
+        <ion-col col-3>
+          <ion-grid>
+            <ion-row>
+             <ion-col>
+               <ion-icon name="remove-circle" (click)="kuranggas1()"></ion-icon>
+               <ion-icon name="add-circle" (click)="tambahgas1()"></ion-icon>
+             </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+<div class text-center>
+  <button ion-button icon-right (click)="tambahbarang" clear>
+  Tambah Barang
+  <ion-icon name="add"></ion-icon>
+  </button>
+</div>
+
+ <button ion-button bottom block (click)="pesan()">OK</button>
+</ion-content>
+

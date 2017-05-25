@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Account</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="outer-content">
+  <div padding-top text-center *ngIf="username">
+    <img src="assets/gambar/profile.png" >
+    <h4>Username : {{username}}</h4>
+    <h4>Nama : {{name}}</h4>
+    <h4>Email : {{email}}</h4>
+    <h4>Contact : {{PhoneNumber}}</h4>
+
+
+    <ion-list text-center>
+      <!-- <button ion-item (click)="updatePicture()">Update Picture</button>
+      <button ion-item (click)="changeUsername()">Change Username</button>
+      <button ion-item (click)="changePassword()">Change Password</button> -->
+      <button ion-button (click)="update()">Update Profile</button>
+      <button ion-button (click)="logout()">Logout</button>
+    </ion-list>
+  </div>
+</ion-content>

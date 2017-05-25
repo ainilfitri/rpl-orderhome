@@ -1,0 +1,51 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Order Home</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding clas="icon">
+	<ion-thumbnail item-center>
+      <img src="assets/gambar/home-icon.png" >
+    </ion-thumbnail>
+    <form #LoginForm="ngForm" novalidate>
+      <ion-list no-lines>
+        <ion-item>
+          <ion-label stacked color="primary">Username</ion-label>
+          <ion-input [(ngModel)]="user.username" placeholder="Username" name="username" type="text" #username="ngModel" required>
+          </ion-input>
+        </ion-item>
+        <p ion-text [hidden]="username.valid || submitted == false" color="danger" padding-left>
+          Username is required
+        </p>
+
+        <ion-item>
+          <ion-label stacked color="primary">Password</ion-label>
+          <ion-input [(ngModel)]="user.password" placeholder="Password" name="password" type="password" #password="ngModel" required>
+          </ion-input>
+        </ion-item>
+        <p ion-text [hidden]="password.valid || submitted == false" color="danger" padding-left>
+          Password is required
+        </p>
+
+      </ion-list>
+      <button ion-button block (click)="onLogin(LoginForm)">Log In</button>
+    </form>
+
+  <div class="row" padding>
+	    <div class="col">
+	        <div class="text-center">
+	            <div style="text-align: center;"><span>Belum punya akun? </span> <span ion-text color="primary" (click)="onSignup()"><b>Sign Up</b></span></div>
+	        </div>
+	    </div>
+	</div>
+	<div class="row" padding>
+	    <div class="col">
+	        <div class="text-center">
+	            <div style="text-align: center;"> <span ion-text color="primary" (click)="onForgotPassword()">Forget Password?</span></div>
+	        </div>
+	    </div>
+	</div>
+</ion-content>

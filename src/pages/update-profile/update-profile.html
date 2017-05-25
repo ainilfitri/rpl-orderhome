@@ -1,0 +1,52 @@
+<ion-header>
+	<ion-navbar>
+		<ion-title>Update Profile</ion-title>
+	</ion-navbar>
+</ion-header>
+
+<ion-content class="UpdateProfilePage">
+	<form #signupForm="ngForm" novalidate>
+		<ion-list no-lines>
+			<ion-item>
+				<ion-label stacked color="primary">Nama lengkap</ion-label>
+				<ion-input [(ngModel)]="user.name" placeholder="Nama lengkap" name="nama" type="text" #nama="ngModel" required>
+				</ion-input>
+			</ion-item>
+			<p ion-text [hidden]="nama.valid || submitted == false" color="danger" padding-left>
+				Nama lengkap is required
+			</p>
+
+			<ion-item>
+				<ion-label stacked color="primary">Email</ion-label>
+				<ion-input [(ngModel)]="user.email" placeholder="Email" name="email" type="email" #email="ngModel" required>
+				</ion-input>
+			</ion-item>
+			<p ion-text [hidden]="email.valid || submitted == false" color="danger" padding-left>
+				Email is required
+			</p>
+
+			<ion-item>
+				<ion-label stacked color="primary">Username</ion-label>
+				<ion-input [(ngModel)]="user.username" placeholder="Username" name="username" type="text" #username="ngModel" required>
+				</ion-input>
+			</ion-item>
+			<p ion-text [hidden]="username.valid || submitted == false" color="danger" padding-left>
+				Username is required
+			</p>
+
+			<ion-item>
+				<ion-label stacked color="primary">Phone Number</ion-label>
+				<ion-input [(ngModel)]="user.phone_number" placeholder="phone number" name="phone number" type="number" #phone_number="ngModel" required>
+				</ion-input>
+			</ion-item>
+			<p ion-text [hidden]="phone_number.valid || submitted == false" color="danger" padding-left>
+				Phone number is required
+			</p>
+		</ion-list>
+
+		<div padding>
+			<button ion-button (click)="onSignup(signupForm)" type="submit" block>Daftar</button>
+		</div>
+	</form>
+
+</ion-content>
